@@ -218,11 +218,40 @@
     .window-bar {
       display: flex;
       align-items: center;
-      gap: 7px;
+      justify-content: space-between;
+      gap: 12px;
       height: 38px;
       padding: 0 14px;
       border-bottom: 1px solid var(--line);
       background: #fbfcfe;
+    }
+
+    .desktop-chip {
+      display: inline-flex;
+      align-items: center;
+      height: 22px;
+      padding: 0 9px;
+      border-radius: 999px;
+      background: var(--mint);
+      color: #214a40;
+      font-size: 0.72rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .browser-address {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      max-width: 260px;
+      height: 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 650;
     }
 
     .dot {
@@ -586,9 +615,8 @@
 
         <div class="product-shot" aria-label="Anteprima interfaccia Filo">
           <div class="window-bar" aria-hidden="true">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <span class="desktop-chip">Web app desktop</span>
+            <span class="browser-address">filo-new.vercel.app</span>
           </div>
           <div class="mock-app">
             <aside class="sidebar" aria-hidden="true">
