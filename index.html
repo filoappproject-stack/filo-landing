@@ -566,13 +566,41 @@
       .button { width: 100%; }
       .mock-app {
         grid-template-columns: 1fr;
-        min-height: auto;
+        min-height: 220px;
       }
       .sidebar { display: none; }
-      .main-panel { padding: 16px; }
-      .board { grid-template-columns: 1fr; }
-      .column { min-height: 136px; }
-      .column:nth-child(3) { display: none; }
+      .main-panel { padding: 14px; }
+      .mock-header {
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .status {
+        width: 82px;
+        height: 30px;
+      }
+      .board {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+      .column {
+        min-height: 150px;
+        padding: 8px;
+      }
+      .column-title {
+        width: 70%;
+        margin-bottom: 10px;
+      }
+      .task {
+        min-height: 48px;
+        padding: 8px;
+        margin-bottom: 8px;
+      }
+      .column .task + .task {
+        display: none;
+      }
+      .browser-address {
+        max-width: 150px;
+      }
     }
   </style>
 </head>
