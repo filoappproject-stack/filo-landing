@@ -229,6 +229,51 @@
       height: auto;
     }
 
+    .visual-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .ai-example {
+      padding: 20px;
+      border: 1px solid #bfe8dc;
+      border-radius: 8px;
+      background: #f4fbf8;
+      box-shadow: 0 16px 34px rgba(20, 33, 61, 0.08);
+    }
+
+    .ai-example h2 {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.3;
+    }
+
+    .ai-example ul {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ai-example li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #214a40;
+      font-size: 0.98rem;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .ai-example li::before {
+      content: "\2713";
+      flex: 0 0 auto;
+      color: var(--mint-strong);
+      font-weight: 900;
+    }
+
     .window-bar {
       display: flex;
       align-items: center;
@@ -712,8 +757,18 @@
           </div>
         </div>
 
-        <div class="product-shot" aria-label="Schermata reale della pagina di accesso di Filo">
-          <img class="product-preview-image" src="filo-app-preview.jpg" alt="Schermata desktop reale della pagina di accesso e registrazione di Filo">
+        <div class="visual-stack">
+          <div class="product-shot" aria-label="Schermata reale della pagina di accesso di Filo">
+            <img class="product-preview-image" src="filo-app-preview.jpg" alt="Schermata desktop reale della pagina di accesso e registrazione di Filo">
+          </div>
+          <div class="ai-example" aria-label="Esempio di suggerimenti generati da Filo">
+            <h2>Oggi Filo potrebbe suggerirti:</h2>
+            <ul>
+              <li>Richiama Marco Rossi entro venerdi</li>
+              <li>Rispondi alla proposta di Acme Spa</li>
+              <li>Aggiorna il cliente Beta sul preventivo</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
