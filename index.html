@@ -134,9 +134,9 @@
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
-      align-items: center;
-      gap: 56px;
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 34px;
       width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
@@ -231,10 +231,13 @@
 
     .visual-stack {
       display: grid;
+      width: 100%;
       gap: 16px;
     }
 
     .ai-example {
+      width: min(760px, 100%);
+      justify-self: center;
       padding: 20px;
       border: 1px solid #bfe8dc;
       border-radius: 8px;
