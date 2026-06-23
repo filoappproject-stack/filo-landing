@@ -146,11 +146,17 @@
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, .94fr) minmax(420px, 1.06fr);
-      align-items: center;
-      gap: 36px;
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 34px;
       width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
+    }
+
+    .hero-copy-block {
+      display: grid;
+      justify-items: center;
+      text-align: center;
     }
 
     .eyebrow {
@@ -189,6 +195,7 @@
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
       margin-top: 32px;
     }
@@ -244,6 +251,8 @@
     .visual-stack {
       display: grid;
       width: 100%;
+      max-width: 1120px;
+      justify-self: center;
       gap: 18px;
     }
 
@@ -641,7 +650,6 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hero { padding-top: 36px; }
-      .hero-inner,
       .section-heading,
       .cta-inner { grid-template-columns: 1fr; }
       .hero-inner { gap: 36px; }
@@ -661,6 +669,8 @@
       .section-inner,
       .cta-inner,
       .footer { width: min(100% - 28px, 1120px); }
+      .hero { padding-bottom: 64px; }
+      .hero-copy-block { text-align: left; justify-items: start; }
       .hero-actions,
       .footer {
         flex-direction: column;
@@ -669,7 +679,10 @@
       .button { width: 100%; }
       .product-shot {
         display: block;
+        width: calc(100vw - 20px);
+        justify-self: center;
         margin-top: 0;
+        border-radius: 14px;
         box-shadow: 0 16px 34px rgba(20, 33, 61, 0.10);
       }
       .mobile-desktop-card {
@@ -743,7 +756,7 @@
 
     <section class="hero">
       <div class="hero-inner">
-        <div>
+        <div class="hero-copy-block">
           <p class="eyebrow">Beta privata · manager e professionisti</p>
           <h1>Una giornata piu' chiara, meno dispersiva, piu' governabile.</h1>
           <p class="hero-copy">
